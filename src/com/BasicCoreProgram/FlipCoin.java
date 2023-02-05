@@ -1,31 +1,21 @@
 package com.BasicCoreProgram;
 
-public class FlipCoin {
-    public static void main(String[] args) {
+public class FlipCoin{
+            public static void main(String[] args){
+                int head=0, tail=0;
+                for (int i=1; i<=10; i++)
+                {
+                    double rand=Math.random();
+                    String coin="";
+                    if(rand < 0.5)
+                        head++;
+                    else
+                        tail++;
+                }
+                System.out.println("Head Probability:"+(head)/10.0);
+                System.out.println("Tail Probability:"+(tail)/10.0);
 
-        // INITIALIZATION
-        int h_cnt = 0, t_cnt = 0;
-        double heads, tails;
-        FlipCoin u = new FlipCoin();
-
-        // INPUT DATA
-        System.out.print("enter no. of times you want to flip the coin: ");
-        int n =u.new;
-
-        // COMPUTATION
-        for (int j = 0; j < n; j++) {
-            double random = Math.random();
-            if (random < 0.5)
-                t_cnt++;
-            else
-                h_cnt++;
-        }
-
-        heads = h_cnt / (double) n * 100;
-        tails = t_cnt / (double) n * 100;
-        System.out.println("Percentage of heads: " + heads + "%");
-        System.out.println("Percentage of tails: " + tails + "%");
+            }
 
     }
 
-}
